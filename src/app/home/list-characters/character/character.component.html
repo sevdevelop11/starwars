@@ -3,4 +3,12 @@
 <div class="image">
     <img [src]="person.image"/>
 </div>
+<div class="characteristics">
+    <div class="gender">
+        <img [src]="person.gender=='male' ? 'assets/images/male.png':'assets/images/female.svg'">
+    </div>
+    <div class="height">
+        <span>{{person.height}}cm</span>
+    </div>
+</div>
 </div>

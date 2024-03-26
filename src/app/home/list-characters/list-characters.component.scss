@@ -21,9 +21,8 @@ ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-
     li {
-        flex: 1 1 300px;
+        flex: 0 1 calc(50% - 15px);
         display: inline-block;
         width: calc(50% - 10px); /* Ancho del elemento, ajusta según sea necesario */
         margin: 0 5px; /* Margen entre elementos */

@@ -9,12 +9,26 @@
     text-align: center;
     background-color: antiquewhite;
 .image {
-    height: 80%;
+    height: 73%;
     display: flex;
     justify-content: center;
     img {
         max-width: -webkit-fill-available;
         border-radius: 0.5rem;
 }
+}
+
+.characteristics {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.8rem;
+    .gender {
+        img {
+        width: 20px;
+        }
+    }
+    .height {
+        margin-left: 0.5rem;
+    }
 }
 }
