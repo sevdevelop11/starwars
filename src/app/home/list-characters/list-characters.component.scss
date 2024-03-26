@@ -1,0 +1,32 @@
+.loading {
+    color: white;
+    font-family: 'StarJedi', sans-serif;
+    height: 100vh;
+    width: 100vw;
+
+    p {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        flex: 1 1 300px;
+        display: inline-block;
+        width: calc(50% - 10px); /* Ancho del elemento, ajusta según sea necesario */
+        margin: 0 5px; /* Margen entre elementos */
+        box-sizing: border-box; /* Incluir el padding y borde en el ancho */
+      }
+  }
