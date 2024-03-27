@@ -29,3 +29,43 @@ ul {
         box-sizing: border-box; /* Incluir el padding y borde en el ancho */
       }
   }
+
+  .pagination {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    button {
+        margin: 0 5px;
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+            background-color: #0056b3;
+          }
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+      }
+      
+  }
+  
+  .page-numbers {
+    display: flex;
+    button {
+        background-color: transparent;
+        color: #007bff;
+        &.disabled {
+            font-weight: bold;
+            background-color: #007bff;
+            color: white;
+            opacity: 0.7;
+          }
+      }
+    span {
+        color: white;
+    }
+  }

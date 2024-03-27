@@ -11,27 +11,25 @@ export class ImgCharacterService {
 
   loadImages(): Observable<string> {
     const url = `https://akabab.github.io/starwars-api/api/all.json`;
-
     return this.http.get<any>(url).pipe(
       map(response => {
         if (response && response.length > 0) {
           return response;
         } else {
-          // Si no hay items en la respuesta, retornar un valor por defecto o manejar el caso de error
           return ''; // Devolver un string vacío
         }}));
   }
 
-  getData1(): Observable<any> {
-    return this.http.get<any>('https://swapi.dev/api/people');
+  getData1(currentPage: number): Observable<any> {
+    return this.http.get<any>('https://swapi.dev/api/people/?page=' + currentPage);
   }
 
-  getData2(): Observable<any> {
+  getData2(currentPage: number): Observable<any> {
     return this.http.get<any>('https://akabab.github.io/starwars-api/api/all.json');
   }
 
-  getData(): Observable<any> {
-    return forkJoin([this.getData1(), this.getData2()]).pipe(
+  getData(currentPage: number): Observable<any> {
+    return forkJoin([this.getData1(currentPage), this.getData2(currentPage)]).pipe(
       map(results => {
         const unifiedResults = [];
         // Objeto para almacenar los resultados por nombre

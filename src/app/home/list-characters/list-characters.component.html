@@ -7,5 +7,15 @@
       <app-character [person]="person"/>
     </li>
   </ul>
+  <div class="pagination">
+    <button (click)="previousPage()" [disabled]="!hasPreviousPage()">Anterior</button>
+    <div class="page-numbers">
+      <button *ngIf="currentPage >= 1" [disabled]="currentPage==1" (click)="goToPage(1)">1</button>
+      <span *ngIf="currentPage > 3">...</span>
+      <button *ngFor="let pageNumber of pageNumbers" (click)="goToPage(pageNumber)" [disabled]="pageNumber === currentPage">{{ pageNumber }}</button>
+      <span *ngIf="currentPage < totalPages - 3">...</span>
+      <button *ngIf="currentPage <= totalPages" (click)="goToPage(totalPages)">{{ totalPages }}</button>
+    </div>    <button (click)="nextPage()" [disabled]="!hasNextPage()">Siguiente</button>
+  </div>
   </ng-template>
 
